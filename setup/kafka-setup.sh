@@ -13,7 +13,7 @@ sudo apt-get install -y default-jre
 sudo apt-get install -y zookeeperd
 
 # Kafka itself
-wget http://mirror.olnevhost.net/pub/apache/kafka/0.10.1.0/kafka_2.10-0.10.1.0.tgz -P ~/Downloads
+wget https://archive.apache.org/dist/kafka/0.10.1.0/kafka_2.10-0.10.1.0.tgz -P ~/Downloads
 
 # Unpack Kafka
 mkdir -p ~/kafka && cd ~/kafka
@@ -23,7 +23,7 @@ tar -xvzf ~/Downloads/kafka_2.10-0.10.1.0.tgz --strip 1
 echo "delete.topic.enable = true" >> ~/kafka/config/server.properties
 
 # Add kafka logging output file
-mkdir ~/Desktop
+mkdir ~/Desktop || true
 touch ~/Desktop/kafka.log
 
 # Add shortcuts to ~/.bashrc

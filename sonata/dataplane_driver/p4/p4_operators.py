@@ -499,8 +499,9 @@ class P4Filter(P4Operator):
         self.miss_action = miss_action
 
         self.source = source
-
+        print("testt1", func)
         if not len(func) > 0 or func[0] == 'geq':
+            print("testt2")
             self.logger.error('Got the following func with the Filter Operator: %s' % (str(func),))
             # raise NotImplementedError
         else:

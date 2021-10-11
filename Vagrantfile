@@ -9,7 +9,7 @@
 Vagrant.configure(2) do |config|
 
   # 64 bit Vagrant Box
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "ubuntu/xenial64"
 
   ## Guest Config
   config.vm.hostname = "vighata"
@@ -20,9 +20,6 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
     sudo apt-get install -y python-dev
-    #sudo apt-get install -y python-pip
-    wget https://bootstrap.pypa.io/get-pip.py 
-    sudo python ./get-pip.py
     sudo apt-get install -y python-pip
     sudo apt-get install -y apache2-utils
     sudo apt-get install -y git
@@ -34,7 +31,7 @@ Vagrant.configure(2) do |config|
      sudo add-apt-repository ppa:webupd8team/java
      sudo apt-get update
      sudo apt-get install -y python-dateutil
-     sudo -H pip install test_helper netaddr
+     sudo -H pip install test_helper contextlib2==0.6.0 netaddr==0.8.0
      sudo -H pip install coloredlogs
      pip install --user scipy
      sudo apt-get install -y python-matplotlib
