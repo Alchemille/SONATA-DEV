@@ -1,3 +1,6 @@
+commands.txt
+compiled.p4
+spark.py
 *.vagrant
 *.json
 *.bz2

@@ -12,6 +12,7 @@ sudo -H pip install -r requirements.txt
 sudo apt-get -yf install
 
 cd ~/bmv2/
+git checkout 1.13.0
 sudo  ./install_deps.sh
 ./autogen.sh
 ./configure
@@ -20,4 +21,4 @@ sudo make install
 
 cd ~
 sudo apt-get install mininet
-sudo -H pip install scapy thrift networkx
+sudo -H pip install scapy decorator==4.4.2 thrift networkx==2.2

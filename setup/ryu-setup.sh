@@ -5,7 +5,7 @@ RYU_VERSION="v3.30"
 cd ~
 
 #  Dependencies for ryu
-sudo apt-get install -y python-routes python-dev
+sudo apt-get install -y python-dev
 
 sudo -H pip install -r ~/dev/setup/pip-ryu-requires
 
